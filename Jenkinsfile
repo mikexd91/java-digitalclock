@@ -38,7 +38,7 @@ pipeline {
                 // '''
                 // dir("${pwd()}/build") {
                     sh 'ant'
-                    junit '**/*.xml'
+                    // junit '**/*.xml'
                     // step([$class: 'JUnitResultArchiver', testResults: '**/TEST-*.xml'])
         //             sh 'ls -la'
         //             sh 'scp -v -o StrictHostKeyChecking=no addressbook.war builder@172.104.43.189:/opt/apache-tomcat-8.5.15/webapps'
