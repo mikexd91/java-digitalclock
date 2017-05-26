@@ -37,7 +37,7 @@ pipeline {
                 //     echo "M2_HOME = ${M2_HOME}"
                 // '''
                 // dir("${pwd()}/build") {
-                    sh 'ant'
+                    sh 'ant build'
         //             sh 'ls -la'
         //             sh 'scp -v -o StrictHostKeyChecking=no addressbook.war builder@172.104.43.189:/opt/apache-tomcat-8.5.15/webapps'
         //             // sh 'cp addressbook.war /opt/apache-tomcat-8.5.15/webapps/'
