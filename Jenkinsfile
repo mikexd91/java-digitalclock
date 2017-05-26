@@ -54,7 +54,7 @@ pipeline {
         stage('Test') {
             steps {
                  echo 'Testing..'  
-                 step([$class: 'JUnitResultArchiver', testResults: '**/build/test/results/TEST-*.xml'])
+                 // step([$class: 'JUnitResultArchiver', testResults: '**/build/test/results/TEST-*.xml'])
                   // junit '**/build/test/results/*.xml'
                  // script{  
                  //    try {
@@ -177,7 +177,7 @@ pipeline {
 
                 dir("${pwd()}/dist"){
                     sh 'ls -la'
-                    sh 'mv DigitalClock.html index.html'
+                    // sh 'mv DigitalClock.html index.html'
                 }
                 
                  // dir("${pwd()}/target") {
