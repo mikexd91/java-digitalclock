@@ -41,15 +41,15 @@ public class DigitalClockTest {
     /**
      * Test of start method, of class DigitalClock.
      */
-    @Test
-    public void testStart() {
-        System.out.println("start");
-        Stage primaryStage = null;
-        DigitalClock instance = new DigitalClock();
-        instance.start(primaryStage);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+//    @Test
+//    public void testStart() {
+//        System.out.println("start");
+//        Stage primaryStage = null;
+//        DigitalClock instance = new DigitalClock();
+//        instance.start(primaryStage);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
 
     /**
      * Test of multiply method, of class DigitalClock.
@@ -67,16 +67,16 @@ public class DigitalClockTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of main method, of class DigitalClock.
-     */
-    @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        DigitalClock.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
+//    /**
+//     * Test of main method, of class DigitalClock.
+//     */
+//    @Test
+//    public void testMain() {
+//        System.out.println("main");
+//        String[] args = null;
+//        DigitalClock.main(args);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
+//    
 }
