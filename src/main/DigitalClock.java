@@ -29,7 +29,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package digitalclock;
+package main;
 
 import java.util.Calendar;
 import javafx.animation.KeyFrame;
@@ -212,6 +212,10 @@ public class DigitalClock extends Application {
                 polygons[i].setEffect(DIGIT_COMBINATIONS[num][i] ? onEffect : offEffect);
             }
         }
+    }
+  
+    public int multiply(int a, int b){
+        return a * b;
     }
 
     /**
