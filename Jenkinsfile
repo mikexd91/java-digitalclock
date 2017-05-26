@@ -171,7 +171,7 @@ pipeline {
             steps {
                 echo 'Deploying...'
 
-                dir("${pwd()/dist}")
+                dir("${pwd()}/dist")
                 
                  // dir("${pwd()}/target") {
                     sh 'ls -la'
