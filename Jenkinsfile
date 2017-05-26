@@ -51,46 +51,47 @@ pipeline {
 
         }
 
-        // stage('Test') {
-        //     steps {
-        //          echo 'Testing..'  
-        //          script{  
-        //             try {
-        //                 // test stuff
-        //                 //We define that if those fail, we don’t want to break the build, we will just make it unstable. 
-        //                 // We also archive our test results by capturing them from the generated results xml file.
+        stage('Test') {
+            steps {
+                 echo 'Testing..'  
+                  junit '**/build/test/results/*.xml'
+                 // script{  
+                 //    try {
+                 //        // test stuff
+                 //        //We define that if those fail, we don’t want to break the build, we will just make it unstable. 
+                 //        // We also archive our test results by capturing them from the generated results xml file.
                         
-        //                 // mvn test with jacoco coverage report - inferior UI
-        //                 // sh 'mvn test-compile org.jacoco:jacoco-maven-plugin:prepare-agent surefire:test -B -e'
+                 //        // mvn test with jacoco coverage report - inferior UI
+                 //        // sh 'mvn test-compile org.jacoco:jacoco-maven-plugin:prepare-agent surefire:test -B -e'
 
-        //                 //mvn test with cobertura coverage report
-        //                 sh 'mvn test-compile cobertura:cobertura -Dcobertura.report.format=xml surefire:test -B -e'
+                 //        //mvn test with cobertura coverage report
+                 //        sh 'mvn test-compile cobertura:cobertura -Dcobertura.report.format=xml surefire:test -B -e'
            
-        //             } catch(err) {
+                 //    } catch(err) {
 
-        //                 currentBuild.result = "UNSTABLE"
-        //                 dir("${pwd()}/target/surefire-reports") {
-        //                     // some block
-        //                     sh 'ls -la'
-        //                     rocketSend channel: 'jenkins-tests', 
-        //                     message: "Test Result of ${env.JOB_NAME} ${env.BUILD_NUMBER} -\
-        //                      (<${env.BUILD_URL}execution/node/4/ws/target/surefire-reports/${env.JOB_NAME}.SampleTest.txt |\
-        //                     Click here to see which Unit Test(s) Failed>)", 
-        //                     rawMessage: true
+                 //        currentBuild.result = "UNSTABLE"
+                 //        dir("${pwd()}/target/surefire-reports") {
+                 //            // some block
+                 //            sh 'ls -la'
+                 //            rocketSend channel: 'jenkins-tests', 
+                 //            message: "Test Result of ${env.JOB_NAME} ${env.BUILD_NUMBER} -\
+                 //             (<${env.BUILD_URL}execution/node/4/ws/target/surefire-reports/${env.JOB_NAME}.SampleTest.txt |\
+                 //            Click here to see which Unit Test(s) Failed>)", 
+                 //            rawMessage: true
                             
-        //                 }   
-        //                 // handle the exception; or ignore it
-        //             } finally {
-        //                 // step([$class: 'JUnitResultArchiver', testResults: '**/TEST-*.xml'])
-        //                 junit '**/target/surefire-reports/*.xml'
+                 //        }   
+                 //        // handle the exception; or ignore it
+                 //    } finally {
+                 //        // step([$class: 'JUnitResultArchiver', testResults: '**/TEST-*.xml'])
+                 //        junit '**/build/test/results/*.xml'
             
-        //             }
+                 //    }
                     
-        //         }    
+                // }    
 
-        //     }  
+            }  
             
-        // }
+        }
 
 
         // // stage('Parallel'){
