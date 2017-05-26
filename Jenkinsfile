@@ -173,7 +173,7 @@ pipeline {
 
                 dir("${pwd()}/dist"){
                     sh 'ls -la'
-                    sh 'mv DigitalClock.html index.html'
+                    // sh 'mv DigitalClock.html index.html'
                 }
                 
                  // dir("${pwd()}/target") {
