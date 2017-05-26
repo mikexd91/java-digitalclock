@@ -226,7 +226,7 @@ def notifyBuild(String buildStatus = 'STARTED') {
     details = "Build Started! - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
   } else if (buildStatus == 'SUCCESS') {
     emojiface = ':smile:'
-    details = "Build Successful! - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>) \n Deploy Successful! - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<http://172.104.43.189:8080/addressbook/|Open Webapp>)"
+    details = "Build Successful! - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>) \n Deploy Successful! - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<http://172.104.43.189:8099/demo/|Open Webapp>)"
   } else if (buildStatus == 'UNSTABLE'){
     emojiface = ':sweat_smile:'
     details = "Build Unstable! - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
