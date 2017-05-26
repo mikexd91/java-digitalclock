@@ -60,7 +60,7 @@ import javafx.util.Duration;
  * @see javafx.scene.effect.Glow
  * @see javafx.scene.shape.Polygon
  * @see javafx.scene.transform.Shear
- * @resource DigitalClock-background.png
+ * 
  */
 public class DigitalClock extends Application {
 
