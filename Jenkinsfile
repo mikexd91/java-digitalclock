@@ -173,7 +173,7 @@ pipeline {
                 
                  // dir("${pwd()}/target") {
                     sh 'ls -la'
-                    sh 'scp -v -o StrictHostKeyChecking=no -r dist/* builder@172.104.43.189:/opt/apache-tomcat-8.5.15/webapps'
+                    sh 'scp -v -o StrictHostKeyChecking=no -r dist/* builder@172.104.43.189:/opt/apache-tomcat-8.5.15/webapps/digitalclock'
                     // sh 'cp addressbook.war /opt/apache-tomcat-8.5.15/webapps/'
                  // }             
             }
