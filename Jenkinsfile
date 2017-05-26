@@ -170,9 +170,12 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
+
+                dir("${pwd()/dist}")
                 
                  // dir("${pwd()}/target") {
                     sh 'ls -la'
+                    sh 'mv DigitalClock.html index.html'
                     sh 'scp -v -o StrictHostKeyChecking=no -r dist/* builder@172.104.43.189:/opt/apache-tomcat-8.5.15/webapps'
                     // sh 'cp addressbook.war /opt/apache-tomcat-8.5.15/webapps/'
                  // }             
