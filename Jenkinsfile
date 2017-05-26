@@ -54,7 +54,8 @@ pipeline {
         stage('Test') {
             steps {
                  echo 'Testing..'  
-                  junit '**/build/test/results/*.xml'
+                 step([$class: 'JUnitResultArchiver', testResults: '**/build/test/results/TEST-*.xml'])
+                  // junit '**/build/test/results/*.xml'
                  // script{  
                  //    try {
                  //        // test stuff
